@@ -14,42 +14,42 @@ import { installMediaQueryWatcher } from 'pwa-helpers/media-query.js';
 
 const styles = document.createElement('style');
 styles.innerHTML = `
-  :host {
-    display: block;
-  }
+:host {
+  display: block;
+}
 
-  h2 {
-    font-size: 20px;
-    color: #217FF9;
-  }
+h2 {
+  font-size: 20px;
+  color: #217FF9;
+}
 
-  h1 {
-    margin-top: 0px;
-    color: #217FF9;
-  }
+h1 {
+  margin-top: 0px;
+  color: #217FF9;
+}
 
-  #header {
-    display: flex;
-  }
+#header {
+  display: flex;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  a:visited {
-    color: #217FF9;
-  }
+a:visited {
+  color: #217FF9;
+}
 
-  #header h1 { flex: 1; }
-  #header svg { margin: 8px 0 8px 0; }
-  .github {transform: scale(1.2, 1.2);}
-  .logo {
-    margin-top: -3px;
-    margin-right: 8px;
-  }
+#header h1 { flex: 1; }
+#header svg { margin: 8px 0 8px 0; }
+.github {transform: scale(1.2, 1.2);}
+.logo {
+  margin-top: -3px;
+  margin-right: 8px;
+}
 
-  .nav { margin-bottom: 20px; }
-  .footer { text-align: center; color: #a8a8a8;}
+.nav { margin-bottom: 20px; }
+.footer { text-align: center; color: #a8a8a8;}
 `;
 
 class OpenWcDemo extends HTMLElement {
