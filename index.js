@@ -116,9 +116,9 @@ class OpenWcDemo extends HTMLElement {
 
   renderHeader() {
     this.header.innerHTML = `
-      <span class="logo"><a href="https://open-wc.org">${openWc.strings[0]}</a></span>
+      <span class="logo"><a href="https://open-wc.org">${openWc}</a></span>
       <h1>${this.capitalize(this.activeTab)} Vanilla WC demos</h1>
-      <a class="github" href="https://www.github.com/open-wc/vanilla-demos" target="_blank">${github.strings[0]}</a>
+      <a class="github" href="https://www.github.com/open-wc/vanilla-demos" target="_blank">${github}</a>
     `;
   }
 
