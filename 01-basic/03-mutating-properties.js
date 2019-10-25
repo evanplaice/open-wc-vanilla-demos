@@ -21,9 +21,7 @@ class MutatingProperties extends HTMLElement {
 
   render() {
     this.innerHTML = `
-      <div>
-        Count from 1 to 10: [${this.count}]
-      </div>
+      Count from 1 to 10: [${this.count}]
     `;
   }
 }

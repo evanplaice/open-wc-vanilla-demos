@@ -2,7 +2,7 @@ import './01-basic-setup.js';
 import './02-using-properties.js';
 import './03-mutating-properties.js';
 import './04-observing-attributes.js';
-import './05-passing-properties.js';
+import './05-mutating-attributes.js';
 import './06-handle-events.js';
 import './07-conditional-rendering.js';
 import './08-repeated-templates.js';
@@ -86,8 +86,8 @@ template.innerHTML = `
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F05-passing-properties.js" target="_blank"><h2>05 Passing properties</h2></a>
-    <passing-properties></passing-properties>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F05-mutating-attributes.js" target="_blank"><h2>05 Mutating attributes</h2></a>
+    <mutating-attributes greeting="Hello web component"></mutating-attributes>
   </div>
 </paper-card>
 

@@ -9,9 +9,7 @@ class UsingProperties extends HTMLElement {
   render() {
     this.innerHTML = `
       <!-- Render the property value directly -->
-      <div>
-        The count is: ${this.count}
-      </div>
+      The count is: ${this.count}
     `;
   }
 }

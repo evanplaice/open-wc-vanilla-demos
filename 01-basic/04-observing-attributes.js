@@ -14,17 +14,14 @@ class ObservingAttributes extends HTMLElement {
 
   render() {
     this.innerHTML = `
+      <!-- Render a the attribute value directly -->
       <div>
-        <!-- Render a the attribute value directly -->
-        <div>
-          The message is: ${this.message}
-        </div>
+        The message is: ${this.message}
+      </div>
 
-        <!-- Call a function and render the return value -->
-        <div>
-          The reversed message is: ${this.reverseMessage(this.message)}
-        </div>
-
+      <!-- Call a function and render the return value -->
+      <div>
+        The reversed message is: ${this.reverseMessage(this.message)}
       </div>
     `;
   }
