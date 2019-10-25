@@ -1,83 +1,85 @@
-import { LitElement, html } from 'lit-element';
+class UpdateArraysAndObjects extends HTMLElement {
+  __array = [
+    { id: 1 },
+    { id: 2 }
+  ];
 
-class UpdateArraysAndObjects extends LitElement {
-  static get properties() {
-    return {
-      myArray: { type: Array },
-      myObject: { type: Object }
-    };
+  __object = {
+    id: 1,
+    text: "foo"
+  };
+
+  get array() { return this.__array; }
+  set array(value) {
+    this.__array = value;
+    this.renderArray();
   }
 
-  constructor() {
-    super();
-    this.myObject = { id: 1, text: "foo" };
-    this.myArray = [{ id: 1 }, { id: 2 }];
+  get object() { return this.__object; }
+  set object(value) {
+    this.__object = value;
+    this.renderObject();
+  }
+
+  connectedCallback() {
+    this.render();
+    this.renderArray();
+    this.renderObject();
   }
 
   render() {
-    return html`
+    this.innerHTML = `
       <h3>Array items</h3>
-      <ul>
-        ${this.myArray.map(item => html`
-          <li>${item.id}</li>
-        `)}
-      </ul>
-
-      <button @click=${this._addArrayItem}>Add array item</button>
+      <ul id="array"></ul>
+      <button id="update-array">Add array item</button>
 
       <h3>Object</h3>
-      <div>
-        <strong>${this.myObject.id}</strong>: ${this.myObject.text}
-      </div>
-      
-      <button @click=${this._updateObjectId}>Add object item</button>
+      <div id="object"></div>
+      <button id="update-object" >Add object item</button>
+    `;
+
+    this.querySelector('#update-array').addEventListener('click', () => this.addArrayItem());
+    this.querySelector('#update-object').addEventListener('click', () => this.updateObjectId());
+  }
+
+  renderArray() {
+    this.querySelector('#array').innerHTML = `
+      ${this.array.map(item => `
+        <li>${item.id}</li>
+      `).join('\n')}
     `;
   }
 
-  /**
-   * If you mutate an array directly, LitElement will not detect
-   * the change automatically.
-   * 
-   * The recommended approach is to use immutable data patterns.
-   * You can easily append an array item using array spread syntax:
-   */
-  _addArrayItem() {
+  renderObject() {
+    this.querySelector('#object').innerHTML = `
+      <strong>${this.object.id}</strong>: ${this.object.text}
+    `;
+  }
+
+  // Mutating the array's contents doesn't change it's value therefore the setter won't be called. To ensure the setter is called, the spread syntax operator can be used to construct a new array.
+  addArrayItem() {
     const newId = Math.round(Math.random() * 100);
     const newItem = { id: newId };
-    this.myArray = [
-      ...this.myArray, 
+    this.array = [
+      ...this.array, 
       newItem,
     ];
-
-    /**
-     * An alternative method is to mutate the array and then call
-     * requestUpdate() to notify LitElement the property changed.
-     */
-    // this.myArray.push(newItem);
-    // this.requestUpdate();
   }
 
   /**
-   * If you mutate an object directly, LitElement will not detect
-   * the change automatically.
+   * If you mutate an object's contents, it's value (reference) doesn't change.
    * 
    * The recommended approach is to use immutable data patterns.
    * You can easily update an object's property using the object
    * spread syntax:
    */
-  _updateObjectId() {
+  updateObjectId() {
     const newId = Math.round(Math.random() * 100);
 
-    this.myObject = { 
-      ...this.myObject,
+    this.object = { 
+      ...this.object,
       id: newId,
     };
-    /**
-     * An alternative method is to mutate the object and then call
-     * requestUpdate() to notify LitElement the property changed.
-     */
-    // this.myObject.id = newId;
-    // this.requestUpdate();
   }
 }
 
