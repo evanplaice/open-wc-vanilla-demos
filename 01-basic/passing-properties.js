@@ -1,3 +1,11 @@
+// <paper-card>
+//   <div class="demo">
+//     <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F06-passing-properties.js" target="_blank"><h2>06 Passing properties</h2></a>
+//     <passing-properties></passing-properties>
+//   </div>
+// </paper-card>
+
+
 class PassingProperties extends HTMLElement {
   author = { name: 'G.R.R. Martin', age: 70 };
   books = [
@@ -10,14 +18,15 @@ class PassingProperties extends HTMLElement {
   }
 
   render() {
+    // create the element imperatively
     const child = document.createElement('author-profile');
-    // this.innerHTML = ` 
-    //   <author-profile id="author-profile"></author-profile>
-    // `;
-
-    // const child = this.querySelector("#author-profile");
-    // child.author = this.author;
-    // child.books = this.books;
+    // assign the properties
+    child.author = this.author;
+    child.books = this.books;
+    // rerender the child
+    child.render();
+    // attach the child
+    this.appendChild(child);
   }
 }
 
@@ -32,9 +41,11 @@ class AuthorProfile extends HTMLElement {
   }
 
   render() {
-    return html`
+    this.innerHTML = `
       <div>${this.author.name}</div>
-      <div>${this.books.map(book => html`<li>${book.title}</li>`)}
+      <ul>
+        ${this.books.map(book => `<li>${book.title}</li>`).join('\n')}
+      </ul>
     `;
   }
 }

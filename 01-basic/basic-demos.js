@@ -3,7 +3,6 @@ import './02-using-properties.js';
 import './03-mutating-properties.js';
 import './04-observing-attributes.js';
 import './05-mutating-attributes.js';
-import './06-passing-properites.js';
 import './06-handle-events.js';
 import './07-conditional-rendering.js';
 import './08-repeated-templates.js';
@@ -11,6 +10,8 @@ import './09-update-arrays-and-objects.js';
 import './10-render-styles.js';
 import './11-fetching-data.js';
 import './12-firing-events.js';
+// import './passing-properties.js';
+
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -91,6 +92,8 @@ template.innerHTML = `
     <mutating-attributes greeting="Hello web component"></mutating-attributes>
   </div>
 </paper-card>
+
+
 
 <paper-card>
   <div class="demo">

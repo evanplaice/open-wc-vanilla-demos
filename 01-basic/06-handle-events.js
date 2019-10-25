@@ -1,35 +1,40 @@
-import { LitElement, html } from 'lit-element';
+class HandleEvents extends HTMLElement {
+  __count = 0;
 
-class HandleEvents extends LitElement {
-  static get properties() {
-    return {
-      count: { type: Number },
-    };
+  // much like the mutating-properties eample, this rerenders the value when it changes 
+  get count() { return this.__count; }
+  set count(value) {
+    this.__count = value;
+    this.renderCount();
   }
 
-  constructor() {
-    super();
-
-    this.count = 0;
+  connectedCallback() {
+    this.render();
   }
 
   render() {
-    return html`
+    this.innerHTML = `
       <div>
-        Current count: [${this.count}]
-        <!-- Use @[eventname] syntax to declaratively register inline event handlers -->
-        <button @click=${() => this.count += 1}>+</button>
-
-        <!--
-          You can also pass a function reference directly. Lit-html will automatically use the element
-          as the function scope ('this' will reference the element)
-        -->
-        <button @click=${this._onDecrement}>-</button>
+        Current count: [<span id="count">${this.count}</span>]
+        <!-- Render the buttons imperatively with ids for easy lookup -->
+        <button id="increment">+</button>
+        <button id="decrement">-</button>
       </div>
     `;
+
+    // attach the events imperatively
+    // Events can either run an anonymous function directly
+    this.querySelector('#increment').addEventListener('click', () => this.count += 1);
+    // ...or can call a function. Using arrow functions ensure that 'this' is accessible from within the function. 
+    this.querySelector('#decrement') .addEventListener('click', () => this.decrement());
   }
 
-  _onDecrement() {
+  // to limit work, updates to the 'count' property should only rerender the number
+  renderCount() {
+    this.querySelector('#count').innerHTML = this.count;
+  }
+
+  decrement() {
     this.count -= 1;
   }
 }
