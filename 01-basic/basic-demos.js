@@ -1,6 +1,6 @@
 import './01-basic-setup.js';
-import './02-manage-properties.js';
-import './03-property-changes.js';
+import './02-using-properties.js';
+import './03-observing-attributes.js';
 import './04-properties-and-attributes.js';
 import './05-passing-properties.js';
 import './06-handle-events.js';
@@ -58,91 +58,90 @@ template.innerHTML = `
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F01-basic-setup.js" target="_blank"><h2>01 Basic setup</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F01-basic-setup.js" target="_blank"><h2>01 Basic setup</h2></a>
     <basic-setup></basic-setup>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F02-manage-properties.js" target="_blank"><h2>02 Manage properties</h2></a>
-    <manage-properties message="Hello world"></manage-properties>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F02-using-properties.js" target="_blank"><h2>02 Using properties</h2></a>
+    <using-properties id="using-properties"></using-properties>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F03-property-changes.js" target="_blank"><h2>03 Property changes</h2></a>
-    <property-changes></property-changes>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F03-observing-attributes.js" target="_blank"><h2>03 Observing attributes</h2></a>
+    <observing-attributes message="Hello world"></observing-attributes>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F04-properties-and-attributes.js" target="_blank"><h2>04 Properties and attributes</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-properties-and-attributes.js" target="_blank"><h2>04 Properties and attributes</h2></a>
     <properties-and-attributes message="Hello world"></properties-and-attributes>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F05-passing-properties.js" target="_blank"><h2>05 Passing properties</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F05-passing-properties.js" target="_blank"><h2>05 Passing properties</h2></a>
     <passing-properties></passing-properties>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F06-handle-events.js" target="_blank"><h2>06 Handle events</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F06-handle-events.js" target="_blank"><h2>06 Handle events</h2></a>
     <handle-events></handle-events>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F07-conditional-rendering.js" target="_blank"><h2>07 Conditional rendering</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F07-conditional-rendering.js" target="_blank"><h2>07 Conditional rendering</h2></a>
     <conditional-rendering message="Hello world"></conditional-rendering>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F08-repeated-templates.js" target="_blank"><h2>08 Repeated templates</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F08-repeated-templates.js" target="_blank"><h2>08 Repeated templates</h2></a>
     <repeated-templates></repeated-templates>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F09-update-arrays-and-objects.js" target="_blank"><h2>09 Update arrays and objects</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F09-update-arrays-and-objects.js" target="_blank"><h2>09 Update arrays and objects</h2></a>
     <update-arrays-and-objects></update-arrays-and-objects>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F10-render-styles.js" target="_blank"><h2>10 Render styles</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F10-render-styles.js" target="_blank"><h2>10 Render styles</h2></a>
     <render-styles></render-styles>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F11-fetching-data.js" target="_blank"><h2>11 Fetching data</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F11-fetching-data.js" target="_blank"><h2>11 Fetching data</h2></a>
     <fetching-data></fetching-data>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-lit-demos?file=01-basic%2F12-firing-events.js" target="_blank"><h2>12 Firing events</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F12-firing-events.js" target="_blank"><h2>12 Firing events</h2></a>
     <fire-events-parent></fire-events-parent>
   </div>
 </paper-card>
 `;
 
 class BasicDemos extends HTMLElement {
-
   constructor() {
     super();
     this.attachShadow({mode: 'open'});

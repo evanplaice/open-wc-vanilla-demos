@@ -1,19 +1,10 @@
-// Create a HTML template for your component
-const template = document.createElement('template');
-template.innerHTML = `<div>Hello world!</div>`
-
 // Create a class definition for your component and extend the HTMLElement base class
 class BasicSetup extends HTMLElement {
-  // A HTMLElement is just that, a basic HTML element. But, web components can have a special style/element encapsulation mechanism called the Shadow DOM
+  // Extending HTMLElement inherits all of the baseline properties, attributes, methods, and events that all DOM elements use.
 
-  // Lets apply both during the component construction 
-  constructor() {
-    super();
-    // This creates the Shadow DOM
-    // mode 'open' mode means its contents can be inspected in browsers
-    this.attachShadow({mode: 'open'});
-    // the shadow element is just a blank slate, this clones the template and attaches it to the shadow
-    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  // this method runs the first time the component is rendered
+  connectedCallback() {
+    this.innerHTML = `<div>Hello world!</div>`;
   }
 }
 
