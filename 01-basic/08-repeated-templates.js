@@ -1,21 +1,15 @@
 class RepeatedTemplates extends HTMLElement {
-  static get properties() {
-    return {
-      books: { type: Array },
-    };
-  }
-
-  constructor() {
-    super();
-
-    this.books = [
+  books = [
       { author: 'G.R.R. Martin', title: 'A Game of Thrones'}, 
       { author: 'Tolkien', title: 'Lord of the Rings'}
-    ];
+  ];
+
+  connectedCallback() {
+    this.render();
   }
 
   render() {
-    return html`
+    this.innerHTML = `
       <!--
         To repeat a template, you can simply use a map function of arrays.
         In this case, it maps the array of messages to an array of templates.
@@ -23,9 +17,7 @@ class RepeatedTemplates extends HTMLElement {
       -->
       Books:
       <ul>
-        ${this.books.map(book => html`
-          <li>${book.author}: ${book.title}</li>
-        `)}
+        ${this.books.map(book => `<li>${book.author}: ${book.title}</li>`).join('\n')}
       </ul>
 
       <!--
@@ -33,13 +25,13 @@ class RepeatedTemplates extends HTMLElement {
       -->
       Books:
       <ul>
-        ${this.books.map(this._bookTemplate)}
+        ${this.books.map(this.bookTemplate).join('\n')}
       </ul>
     `;
   }
 
-  _bookTemplate(book) {
-    return html`<li>${book.author}: ${book.title}</li>`;
+  bookTemplate(book) {
+    return `<li>${book.author}: ${book.title}</li>`;
   }
 }
 
