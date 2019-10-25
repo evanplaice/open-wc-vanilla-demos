@@ -1,10 +1,10 @@
 class ObservingAttributes extends HTMLElement {
-  // this tells browsers what custom attributes to look for.
+  // this tells browsers what custom attributes to look for
   static observedAttributes() {
     return ['message'];
   }
 
-  // a getter/setter can be used to get/set the attribute value like it is a class property
+  // a getter/setter can be used to map an attribute to a property on the class
   get message() { return this.getAttribute('message'); }
   set message(value) { this.setAttribute('message', value); }
 

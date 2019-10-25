@@ -1,7 +1,7 @@
 import './01-basic-setup.js';
 import './02-using-properties.js';
 import './03-observing-attributes.js';
-import './04-properties-and-attributes.js';
+import './04-mutating-properties.js';
 import './05-passing-properties.js';
 import './06-handle-events.js';
 import './07-conditional-rendering.js';
@@ -79,8 +79,8 @@ template.innerHTML = `
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-properties-and-attributes.js" target="_blank"><h2>04 Properties and attributes</h2></a>
-    <properties-and-attributes message="Hello world"></properties-and-attributes>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-mutating-properties.js" target="_blank"><h2>04 Mutating Properties</h2></a>
+    <mutating-properties></mutating-properties>
   </div>
 </paper-card>
 
