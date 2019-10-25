@@ -7,6 +7,9 @@ import './06-light-dom.js';
 import './07-reflecting-attributes.js';
 import './08-dynamic-repeated-templates.js';
 import './09-slotting.js';
+// import './firing-events.js';
+// import './passing-properties.js';
+
 
 const template = document.createElement('template');
 template.innerHTML = `

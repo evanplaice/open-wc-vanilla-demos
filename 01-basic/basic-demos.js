@@ -1,17 +1,13 @@
 import './01-basic-setup.js';
 import './02-using-properties.js';
 import './03-mutating-properties.js';
-import './04-observing-attributes.js';
+import './04-using-attributes.js';
 import './05-mutating-attributes.js';
 import './06-handle-events.js';
 import './07-conditional-rendering.js';
 import './08-repeated-templates.js';
 import './09-update-arrays-and-objects.js';
-import './10-render-styles.js';
-import './11-fetching-data.js';
-import './12-firing-events.js';
-// import './passing-properties.js';
-
+import './10-fetching-data.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -81,8 +77,8 @@ template.innerHTML = `
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-observing-attributes.js" target="_blank"><h2>04 Observing attributes</h2></a>
-    <observing-attributes message="Hello world"></observing-attributes>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-using-attributes.js" target="_blank"><h2>04 Using attributes</h2></a>
+    <using-attributes message="Hello world"></using-attributes>
   </div>
 </paper-card>
 
@@ -92,8 +88,6 @@ template.innerHTML = `
     <mutating-attributes greeting="Hello web component"></mutating-attributes>
   </div>
 </paper-card>
-
-
 
 <paper-card>
   <div class="demo">
@@ -125,22 +119,8 @@ template.innerHTML = `
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F10-render-styles.js" target="_blank"><h2>10 Render styles</h2></a>
-    <render-styles></render-styles>
-  </div>
-</paper-card>
-
-<paper-card>
-  <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F11-fetching-data.js" target="_blank"><h2>11 Fetching data</h2></a>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F10-fetching-data.js" target="_blank"><h2>10 Fetching data</h2></a>
     <fetching-data></fetching-data>
-  </div>
-</paper-card>
-
-<paper-card>
-  <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F12-firing-events.js" target="_blank"><h2>12 Firing events</h2></a>
-    <fire-events-parent></fire-events-parent>
   </div>
 </paper-card>
 `;

@@ -1,6 +1,11 @@
-import { LitElement, html, css } from 'lit-element';
+// <paper-card>
+//   <div class="demo">
+//     <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F12-firing-events.js" target="_blank"><h2>12 Firing events</h2></a>
+//     <fire-events-parent></fire-events-parent>
+//   </div>
+// </paper-card>
 
-class FireEventsParent extends LitElement {
+class FireEventsParent extends HTMLElement {
   someCallback(event) {
     console.log(event.detail);
   }
@@ -12,7 +17,7 @@ class FireEventsParent extends LitElement {
   }
 }
 
-class FireEventsChild extends LitElement {
+class FireEventsChild extends HTMLElement {
   handleClick() {
     this.dispatchEvent(new CustomEvent('event-fired', { detail: 'some data' }));
   }

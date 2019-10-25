@@ -1,3 +1,10 @@
+// <paper-card>
+//   <div class="demo">
+//     <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F10-render-styles.js" target="_blank"><h2>10 Render styles</h2></a>
+//     <render-styles></render-styles>
+//   </div>
+// </paper-card>
+
 import { LitElement, html, css } from 'lit-element';
 
 class RenderStyles extends LitElement {

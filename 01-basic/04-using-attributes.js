@@ -1,4 +1,4 @@
-class ObservingAttributes extends HTMLElement {
+class UsingAttributes extends HTMLElement {
   // this tells browsers what custom attributes to look for
   static observedAttributes() {
     return ['message'];
@@ -31,4 +31,4 @@ class ObservingAttributes extends HTMLElement {
   }
 }
 
-customElements.define('observing-attributes', ObservingAttributes);
+customElements.define('using-attributes', UsingAttributes);

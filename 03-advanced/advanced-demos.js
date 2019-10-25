@@ -7,6 +7,7 @@ import './05-shared-styles.js';
 import './06-external-template.js';
 import './07-template-factories.js';
 import './08-should-update.js';
+// import './render-styles.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
