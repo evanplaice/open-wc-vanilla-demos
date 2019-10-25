@@ -4,14 +4,21 @@ class MutatingAttributes extends HTMLElement {
   }
 
   get greeting() { return this.getAttribute('greeting'); }
-  set greeting(value) { this.setAttribute('greeting', value); }
+  set greeting(value) {
+    this.setAttribute('greeting', value);
+    this.render();
+  }
 
   connectedCallback() {
-    this
-  attributeChangedCallback(name, oldValue, newValue) {
-    
-
+    this.render();
   }
+
+  // this callback triigers when an attribute has changed
+  // attributeChangedCallback(name, oldValue, newValue) {
+  //   if (name === 'greeting' && oldValue !== newValue) {
+  //     this.render();
+  //   }
+  // }
 
   render() {
     this.innerHTML = `

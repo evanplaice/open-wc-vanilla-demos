@@ -3,6 +3,7 @@ import './02-using-properties.js';
 import './03-mutating-properties.js';
 import './04-observing-attributes.js';
 import './05-mutating-attributes.js';
+import './06-passing-properites.js';
 import './06-handle-events.js';
 import './07-conditional-rendering.js';
 import './08-repeated-templates.js';
