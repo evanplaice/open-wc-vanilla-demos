@@ -1,7 +1,7 @@
 import './01-basic-setup.js';
 import './02-using-properties.js';
-import './03-observing-attributes.js';
-import './04-mutating-properties.js';
+import './03-mutating-properties.js';
+import './04-observing-attributes.js';
 import './05-passing-properties.js';
 import './06-handle-events.js';
 import './07-conditional-rendering.js';
@@ -72,15 +72,15 @@ template.innerHTML = `
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F03-observing-attributes.js" target="_blank"><h2>03 Observing attributes</h2></a>
-    <observing-attributes message="Hello world"></observing-attributes>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F03-mutating-properties.js" target="_blank"><h2>03 Mutating Properties</h2></a>
+    <mutating-properties></mutating-properties>
   </div>
 </paper-card>
 
 <paper-card>
   <div class="demo">
-    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-mutating-properties.js" target="_blank"><h2>04 Mutating Properties</h2></a>
-    <mutating-properties></mutating-properties>
+    <a href="https://stackblitz.com/edit/open-wc-vanilla-demos?file=01-basic%2F04-observing-attributes.js" target="_blank"><h2>04 Observing attributes</h2></a>
+    <observing-attributes message="Hello world"></observing-attributes>
   </div>
 </paper-card>
 
