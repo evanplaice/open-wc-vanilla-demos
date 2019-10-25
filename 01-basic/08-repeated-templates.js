@@ -1,6 +1,4 @@
-import { LitElement, html } from 'lit-element';
-
-class RepeatedTemplates extends LitElement {
+class RepeatedTemplates extends HTMLElement {
   static get properties() {
     return {
       books: { type: Array },

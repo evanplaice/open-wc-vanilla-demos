@@ -1,40 +1,48 @@
-import { LitElement, html } from 'lit-element';
+class ConditionalRendering extends HTMLElement {
+  __disabled = false;
+  __showMessage = false;
 
-// You also implement conditional logic in separate functions
-function getMessage(message, showMessage) {
-  if (!showMessage) {
-    return '';
+  static observedAttributes() {
+    return ['message'];
   }
 
-  return `Message from function: ${message}`;
-}
+  get disabled() { return this.__disabled; }
+  set disabled(value) {
+    this.__disabled = value;
+    this.render();
+  }
 
-class ConditionalRendering extends LitElement {
-  static get properties() {
-    return {
-      showMessage: { type: Boolean },
-      message: { type: String },
-      disabled: { type: Boolean },
-    };
+  get showMessage() { return this.__showMessage; }
+  set showMessage(value) {
+    this.__showMessage = value;
+    this.render();
+  }
+
+  get message() { return this.getAttribute('message'); }
+  set message(value) { this.setAttribute('message', value); }
+
+  connectedCallback() {
+    this.render();
   }
 
   render() {
     // you can use regular if statements
     if (this.disabled) {
-      return html`Nothing to see here`;
+      this.innerHTML = `Nothing to see here`;
+      return;
     }
 
-    return html`
+    this.innerHTML = `
       <div>
-        <button @click=${() => this.showMessage = !this.showMessage}>
-          <!-- You can use ternary expressions for quick conditional rendering -->
+        <!-- You can use ternary expressions for quick conditional rendering -->
+        <button id="show-message">
           Click to ${this.showMessage ? 'hide' : 'show'} message
         </button>
 
         <!-- Or to conditionally show/hide a template -->
         <div>
           ${this.showMessage
-            ? html`The message is: ${this.message}`
+            ? `The message is: ${this.message}`
             : ''}
         </div>
 
@@ -44,7 +52,20 @@ class ConditionalRendering extends LitElement {
         </div>
       </div>
     `;
+
+    this.querySelector("#show-message").addEventListener('click', () => {
+      this.showMessage = !this.showMessage
+    });
   }
+}
+
+// You also implement conditional logic in separate functions
+function getMessage(message, showMessage) {
+  if (!showMessage) {
+    return '';
+  }
+
+  return `Message from function: ${message}`;
 }
 
 customElements.define('conditional-rendering', ConditionalRendering);
