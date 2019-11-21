@@ -1,5 +1,8 @@
 class HandleEvents extends HTMLElement {
-  __count = 0;
+  constructor() {
+    super();
+    this.__count = 0;
+  }
 
   // much like the mutating-properties eample, this rerenders the value when it changes 
   get count() { return this.__count; }

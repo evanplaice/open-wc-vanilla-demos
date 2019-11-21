@@ -1,6 +1,9 @@
 class UsingProperties extends HTMLElement {
-  // default property values can be defined directly on the class
-  count = 5;
+  constructor() {
+    super();
+    // default property values can be defined in the constructor
+    this.count = 5;
+  }
 
   connectedCallback() {
     this.render();

@@ -1,6 +1,9 @@
 class MutatingProperties extends HTMLElement {
-  // the '__' prefix is used to avoid a naming conflict w/ the getter/setter
-  __count = 1;
+  constructor() {
+    super();
+    // the '__' prefix is used to avoid a naming conflict w/ the getter/setter
+    this.__count = 1;
+  }
 
   // get/set methods can be used to trigger changes when a property changes
   get count() { return this.__count; }

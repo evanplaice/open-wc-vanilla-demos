@@ -1,6 +1,9 @@
 class ConditionalRendering extends HTMLElement {
-  __disabled = false;
-  __showMessage = false;
+  constructor() {
+    super();
+    this.__disabled = false;
+    this.__showMessage = false;
+  }
 
   static observedAttributes() {
     return ['message'];

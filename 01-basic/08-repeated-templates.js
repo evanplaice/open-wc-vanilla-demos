@@ -1,8 +1,11 @@
 class RepeatedTemplates extends HTMLElement {
-  books = [
-      { author: 'G.R.R. Martin', title: 'A Game of Thrones'}, 
-      { author: 'Tolkien', title: 'Lord of the Rings'}
-  ];
+  constructor() {
+    super();
+    this.books = [
+        { author: 'G.R.R. Martin', title: 'A Game of Thrones'}, 
+        { author: 'Tolkien', title: 'Lord of the Rings'}
+    ];
+  }
 
   connectedCallback() {
     this.render();

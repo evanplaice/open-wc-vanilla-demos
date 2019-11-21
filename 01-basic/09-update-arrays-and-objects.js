@@ -1,13 +1,16 @@
 class UpdateArraysAndObjects extends HTMLElement {
-  __array = [
-    { id: 1 },
-    { id: 2 }
-  ];
+  constructor() {
+    super();
+    this.__array = [
+      { id: 1 },
+      { id: 2 }
+    ];
 
-  __object = {
-    id: 1,
-    text: "foo"
-  };
+    this.__object = {
+      id: 1,
+      text: "foo"
+    };
+  }
 
   get array() { return this.__array; }
   set array(value) {

@@ -1,5 +1,9 @@
 class FetchingData extends HTMLElement {
-  __response = [];
+  constructor() {
+    super();
+    this.__response = [];
+  }
+  
 
   get response() { return this.__response; }
   set response(value) {

@@ -53,12 +53,6 @@ a:visited {
 `;
 
 class OpenWcDemo extends HTMLElement {
-  styles;
-  header;
-  nav;
-  main;
-  footer;
-
   constructor() {
     super();
     this.attachShadow({mode: 'open'});
